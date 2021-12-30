@@ -1,5 +1,6 @@
 import { FieldAttributes } from 'formik';
 import { Input } from './Input';
+import { RadioButtons } from './RadioButtons';
 import { Select } from './Select';
 import { Textarea } from './Textarea';
 
@@ -16,6 +17,7 @@ export const FormikControl = ({ control, ...rest }: FormikControlProps) => {
     case 'select':
       return <Select {...rest} />;
     case 'radio':
+      return <RadioButtons {...rest} />;
     case 'checkbox':
     case 'date':
     default:
